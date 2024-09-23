@@ -1,5 +1,9 @@
-import _ from 'lodash';
+const capitalize = (word) => {
+  if (word === '') {
+    return '';
+  }
+  const [firstChar, ...others] = word;
+  return `${firstChar.toUpperCase()}${others.join('')}`;
+};
 
-const endElement = () => console.log(_.last(['one', 'two']));
-
-export default endElement;
+export default capitalize;
